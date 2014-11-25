@@ -1,0 +1,61 @@
+@import url(common.css);
+body {
+  width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  color: #555;
+}
+
+p {
+  font-size: 14px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #c6538c;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+a {
+  width: 30px;
+  height: 30px;
+  color: #09f;
+  text-decoration: none;
+  *display: inline;
+  *zoom: 1;
+  text-shadow: 2px 1px 1px #f30;
+}
+a:hover {
+  opacity: 80;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.link, .fromsource .link {
+  font-size: 14px;
+  text-shadow: none;
+}
+
+*::selection {
+  background: #09f;
+  color: #fff;
+}
+
+*::-moz-selection {
+  background: #09f;
+  color: #fff;
+}
+
+.fromsource {
+  font-size: 18px;
+  width: 100px;
+}
+
+.fromsource .link {
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=demo.css.map */

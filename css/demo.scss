@@ -1,0 +1,121 @@
+@import "common.css";
+
+$size14:14px;
+
+$color555:#555;
+
+$margin:0 auto;
+
+$padding15:15px;
+
+$color09f:#09f;
+
+$page-width: 1000px;
+
+$border:1px solid #ddd;
+
+$a-color: #ddd #09f !default;
+
+$lte7:true !default;
+
+$center:center;
+
+$whiteColor:#fff;
+
+$h2-color:#c6538c;
+
+$weight:bold;
+
+$opacity:80;
+
+$none:none;
+
+@function width-cal($param){
+  @return $param*2;
+}
+
+
+@mixin linkModele(){
+  width:30px;
+  height:30px;
+  color:$color09f;
+  text-decoration:none;
+  @if $lte7{
+    *display:inline;
+    *zoom:1;
+  }
+}
+
+@mixin module(){
+  opacity:80;
+  width:200px;
+  height:200px;
+  border-width:100px;
+  @if $lte7{
+    *display:inline;
+    *zoom:1;
+  }
+}
+
+@mixin border-radius($radius:5px,$padding:5px){
+  border-radius:$radius $radius $radius $radius;
+  padding:$padding;
+}
+
+@mixin box-shadow($shadow...){
+  box-shadow:$shadow;
+  -o-box-shadow:$shadow;
+  -moz-box-shadow:$shadow;
+  -webkit-box-shadow:$shadow;
+}
+
+@mixin text-shadow($shadow...){
+	text-shadow: $shadow; ;	
+}
+
+body{
+	width:$page-width;
+	margin:$margin;
+	background:$whiteColor;
+	color:$color555;
+}
+p{
+	font-size:
+	$size14;
+}
+h2{
+	font-weight:$weight;
+	color:$h2-color;
+	border-bottom:$border;
+	padding-bottom:$padding15
+}
+a { 
+  @include linkModele();
+  &:hover{
+    opacity:$opacity;
+  }
+  @include text-shadow(2px 1px 1px #f30);
+}
+li{
+	margin-bottom:(20px/2);
+}
+.link{
+	font-size:$size14;
+	text-shadow:$none;
+}
+*::selection{
+	background:#09f;
+	color:$whiteColor;
+}
+*::-moz-selection{
+	background:#09f;
+	color:$whiteColor;
+}
+.fromsource{
+	font-size:$size14+4;
+	width: width-cal(50px)
+}
+.fromsource .link{
+   @extend .link ;
+   font-size:$size14+4;
+}
